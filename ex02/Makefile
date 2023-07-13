@@ -6,7 +6,7 @@
 #    By: mwagner <mwagner@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/20 13:58:26 by mwagner           #+#    #+#              #
-#    Updated: 2023/06/23 14:05:56 by mwagner          ###   ########.fr        #
+#    Updated: 2023/07/13 20:34:18 by mwagner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RED 		:= \033[0;31m
 RESET_COL 	:= \033[0m
 
 NAME 		:= mutated_abomination
-CC 		:= c++
+CC 			:= c++
 CFLAGS 		:= -Wall -Werror -Wextra -std=c++98
 SRC 		:=	main.cpp \
 			MutantStack.cpp
