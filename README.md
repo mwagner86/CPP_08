@@ -1,5 +1,5 @@
-# CPP_06
-### C++ casts
+# CPP_08
+### C++ Templated containers, iterators, algorithms
 
 ## Exercise 00:
 ### Easy find
