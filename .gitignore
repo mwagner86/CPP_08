@@ -1,3 +1,7 @@
+# IDE Options
+.vscode/
+.idea/
+
 # Prerequisites
 *.d
 
@@ -30,3 +34,10 @@
 *.exe
 *.out
 *.app
+
+CPP_Subjects/*
+Reference/*
+cmake-build-debug/
+easy_find
+span
+mutated_abomination
