@@ -56,7 +56,7 @@ int main() {
 		std::list<int> myList;
 		randomPopulateList(myList);
 
-		int searchValue = 42;
+		int searchValue = 21;
 		std::list<int>::iterator result = easyfind(myList, searchValue);
 
 		std::cout << "Found " << searchValue << " in List at index " << std::distance(myList.begin(), result) << std::endl;
