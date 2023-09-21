@@ -6,7 +6,7 @@
 /*   By: mwagner <mwagner@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 20:34:01 by mwagner           #+#    #+#             */
-/*   Updated: 2023/07/13 20:34:02 by mwagner          ###   ########.fr       */
+/*   Updated: 2023/09/21 11:50:41 by mwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,14 +117,13 @@ int main() {
 		if (VERBOSE) std::cout << "\n----- Test 6: Copy Constructor -----" << std::endl;
 
 		// Test adding numbers to the copied object
-		std::cout << "\n spanCopy ADD NUMBER" << std::endl;
 		spanCopy.addNumber(7);
 		spanCopy.addNumber(20);
 
 		// Check if span1 and span2 are independent
-		std::cout << "Span1 Shortest Span: " << spanDefault.shortestSpan() << std::endl; // Should not be affected
+		std::cout << "spanDefault Shortest Span: " << spanDefault.shortestSpan() << std::endl; // Should not be affected
 		std::cout << "spanCopy Shortest Span: " << spanCopy.shortestSpan() << std::endl;
-		std::cout << "Span1 Longest Span: " << spanDefault.longestSpan() << std::endl;   // Should not be affected
+		std::cout << "spanDefault Longest Span: " << spanDefault.longestSpan() << std::endl;   // Should not be affected
 		std::cout << "spanCopy Longest Span: " << spanCopy.longestSpan() << std::endl;
 
 		// Test assignment operator
@@ -137,10 +136,10 @@ int main() {
 		spanAssignment.addNumber(18);
 
 		// Check if span1 and span3 are independent
-		std::cout << "Span1 Shortest Span: " << spanDefault.shortestSpan() << std::endl; // Should not be affected
-		std::cout << "Span3 Shortest Span: " << spanAssignment.shortestSpan() << std::endl;
-		std::cout << "Span1 Longest Span: " << spanDefault.longestSpan() << std::endl;   // Should not be affected
-		std::cout << "Span3 Longest Span: " << spanAssignment.longestSpan() << std::endl;
+		std::cout << "spanDefault Shortest Span: " << spanDefault.shortestSpan() << std::endl; // Should not be affected
+		std::cout << "spanAssignment Shortest Span: " << spanAssignment.shortestSpan() << std::endl;
+		std::cout << "spanDefault Longest Span: " << spanDefault.longestSpan() << std::endl;   // Should not be affected
+		std::cout << "spanAssignment Longest Span: " << spanAssignment.longestSpan() << std::endl;
 
 	}
 	catch (const std::exception& e) {
