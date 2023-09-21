@@ -6,7 +6,7 @@
 /*   By: mwagner <mwagner@student.42wolfsburg.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 20:34:12 by mwagner           #+#    #+#             */
-/*   Updated: 2023/07/13 20:34:13 by mwagner          ###   ########.fr       */
+/*   Updated: 2023/09/21 20:29:24 by mwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <list>
 
 /*
-
 // Subject main function
 int main()
 {
@@ -91,6 +90,33 @@ int main() {
 }*/
 
 int main() {
+
+
+	// Show member function functionality
+	MutantStack<int> memberMutant;
+
+    // Push some elements onto the MutantStack
+    memberMutant.push(5);
+    memberMutant.push(17);
+
+    // Use the original std::stack member functions
+	std::cout << "Testing std::stack member functions on MutantStack:" << std::endl;
+
+    std::cout << "Top element: " << memberMutant.top() << std::endl;
+    std::cout << "Stack size: " << memberMutant.size() << std::endl;
+
+    memberMutant.pop();
+
+    std::cout << "After popping, stack size: " << memberMutant.size() << std::endl;
+
+    memberMutant.push(3);
+
+    std::cout << "Pushed 3, new top element: " << memberMutant.top() << std::endl;
+
+	std::cout << std::endl;
+
+	// Comparison between MutantStack and std::stack
+	
 	// Create a MutantStack and a std::stack of integers
 	MutantStack<int> mutantStack;
 	std::stack<int> stdStack;
@@ -101,7 +127,7 @@ int main() {
 		stdStack.push(i);
 	}
 
-	std::cout << "Testing MutantStack:" << std::endl;
+	std::cout << "Testing iterators on MutantStack:" << std::endl;
 
 	// Iterate through MutantStack using iterators
 	MutantStack<int>::iterator mutantIt;
