@@ -20,8 +20,7 @@ RESET_COL 	:= \033[0m
 NAME 		:= mutated_abomination
 CC 			:= c++
 CFLAGS 		:= -Wall -Werror -Wextra -std=c++98
-SRC 		:=	main.cpp \
-			MutantStack.cpp
+SRC 		:=	main.cpp
 
 all: $(NAME)
 
