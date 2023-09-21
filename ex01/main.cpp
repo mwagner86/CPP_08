@@ -135,7 +135,7 @@ int main() {
 		spanAssignment.addNumber(5);
 		spanAssignment.addNumber(18);
 
-		// Check if span1 and span3 are independent
+		// Check if spanDefault and spanAssignment are independent
 		std::cout << "spanDefault Shortest Span: " << spanDefault.shortestSpan() << std::endl; // Should not be affected
 		std::cout << "spanAssignment Shortest Span: " << spanAssignment.shortestSpan() << std::endl;
 		std::cout << "spanDefault Longest Span: " << spanDefault.longestSpan() << std::endl;   // Should not be affected
@@ -145,5 +145,22 @@ int main() {
 	catch (const std::exception& e) {
 		std::cerr << "Exception: " << e.what() << std::endl;
 	}
+
+	if (VERBOSE) std::cout << "\n----- Test 8: Add Multiple Numbers -----" << std::endl;
+
+	Span spanMulti(10); // Create a Span object with a maximum of 10 elements
+
+	int numbersToAddArray[] = {1, 9, 3, 36, 42, 128, -15, 12, 123};
+
+	try {
+		spanMulti.addRange(numbersToAddArray, numbersToAddArray + sizeof(numbersToAddArray) / sizeof(int));
+	}
+	catch (const std::runtime_error& e) {
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+	// Check if Span works with addedRange
+	std::cout << "Shortest Span: " << spanMulti.shortestSpan() << std::endl;
+	std::cout << "Longest Span: " << spanMulti.longestSpan() << std::endl;
+
 	return 0;
 }

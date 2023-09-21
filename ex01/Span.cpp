@@ -70,3 +70,13 @@ int Span::longestSpan() const {
 
 	return (sortedNumbers.back() - sortedNumbers.front());
 }
+
+void Span::addRange(const int* begin, const int* end) {
+	while (begin != end) {
+		if (_numbers.size() >= _max_elements) {
+			throw std::runtime_error("Span is already full");
+		}
+		_numbers.push_back(*begin);
+		++begin;
+	}
+}

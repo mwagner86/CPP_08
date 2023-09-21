@@ -34,12 +34,12 @@ public:
 	int shortestSpan() const;
 	int longestSpan() const;
 
+	void addRange(const int* begin, const int* end);
 
 private:
 
 	unsigned int _max_elements;
 	std::vector<int> _numbers;
-
 };
 
 #endif //EX01_SPAN_HPP
